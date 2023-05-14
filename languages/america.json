@@ -1,0 +1,92 @@
+{
+    "surumden_kaldirildi":"Removed",
+    "feed":{
+        "articles":{
+            "makale_ekle":"Add Article",
+            "yazar":"Written by:",
+            "baslik":"Title",
+            "metin_html":"Content (HTML)",
+            "yaz":"Write"
+        },
+        "follows":{
+            "ne_dusunuyorsun":"What's in your mind, ",
+            "paylasim_yap":"Create a Post",
+            "takip_edilenler":"Following",
+            "akis":"Feed",
+            "kesfet":"Explore",
+            "devamini_oku":"Read more...",
+            "onerme":"Don't Recommend"
+        },
+        "communities":{
+            "bulundugun_topluluklar":"Communities you joined",
+            "diger_topluluklar":"Other Communities",
+            "topluluk_olustur":"Create Community",
+            "uye":"member",
+            "alt_topluluklar":"Sub-Community",
+            "etkinlik_olustur":"Create Event",
+            "create":{
+                "isim":"Name",
+                "aciklama":"Description",
+                "olustur":"Create",
+                "sahip_eposta":"Owner E-Mail Address",
+                "kaydet":"Save",
+                "paylasim_izni":"Those with Permission to Post",
+                "topluluk_yoneticileri":"Community Moderators",
+                "sil":"Delete",
+                "ayarlar":"Settings"
+            },
+            "etkinlikler":"Events",
+            "kurallar":"Rules",
+            "olusturan":"Created by"
+        },
+        "direct":{
+            "mesaj_yaz":"Write a message",
+            "sohbet_baslat":"Start Chat",
+            "sohbet_ekle":"Add Chat",
+            "e_posta":"E-Mail",
+            "ayarlar":"Settings",
+            "isim":"Name",
+            "kullanicilar":"Users",
+            "kaydet":"Save",
+            "mesaj":"Message",
+            "sunucu_adresi":"Server Address",
+            "oda":"Room",
+            "oda_anahtari":"Room Key",
+            "dis_odaya_baglan":"Connect to Remote Room",
+            "guvenli_dis_odaya_baglan":"Connect to Secure Remote Room",
+            "dis_oda_uyari":"On remote, everybody who has server address and room name can join. Do not use for private chats."
+        }
+    },
+    "user":{
+        "takipci":"Follower",
+        "hesap_ayarlari":"Account Settings",
+        "kaydet":"Save",
+        "guncelle":"Update",
+        "yeni_durum":"New Status",
+        "durum_guncelle":"Update Status",
+        "biyografi_ayarla":"Set Biography",
+        "biyografi":"Biography",
+        "ayarla":"Set",
+        "renk_temalari":"Color Themes",
+        "renk_temalari_aciklama":"With adding one of these color codes with { prefix to end of your biography, you can add color the app and your profile page!",
+        "app_statuses":{
+            "surfing":"Surfing",
+            "playing":"Playing",
+            "listening":"Listening"
+        }
+    },
+    "search":{
+        "kisiler":"Users",
+        "topluluklar":"Communities",
+        "paylasimlar":"Posts",
+        "ara":"Search..."
+    },
+    "login":{
+        "esenlikler":"Welcome,",
+        "bu_hesapla_devam_et":"Continue with This Account",
+        "iyi_geceler":"Good Night,",
+        "gunaydin":"Good Morning,",
+        "iyi_gunler":"Have a Nice Day, ",
+        "iyi_aksamlar":"Good Afternoon"
+    }
+}

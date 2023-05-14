@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ community_is.community_info.title }} - PlayfulSocial Topluluklar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='feed.css')}}">
+    {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='index-plus.css')}}">{%endif%}
+    <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <div class="topnav">
+      {% if True %}
+      <a class="title">{{ community_is.community_info.title }}</a>
+      {% if community_is.community_info.owner == current_user.email %}
+      <a class="deactive_left" href="{{url_for('set_community', name=community_is.name)}}"><span class="material-symbols-rounded md-18">settings</span></a>
+      {% else %}
+      {% if community_is.community_info.title in current_user.communities %}
+      <a class="deactive_left" href="{{url_for('leave_community', name=community_is.community_info.title.split('#')[0])}}"><span class="material-symbols-rounded md-18">logout</span></a>
+      {% else %}
+      <a class="deactive_left" href="{{url_for('join_community', name=community_is.community_info.title.split('#')[0])}}"><span class="material-symbols-rounded md-18">add</span></a>
+      {% endif %}
+      {% endif %}
+      {% if community_is.owner == current_user.email %}
+      {% if not community_main.owner == current_user.email %}
+      <a class="deactive_left" href="{{url_for('set_community', name=community_is.name)}}"><span class="material-symbols-rounded md-18">settings</span></a>
+      {% endif %}
+      {% endif %}
+      <a class="deactive_left" href="{{url_for('community', name=community_is.community_info.title.split('#')[0])}}"><span class="material-symbols-rounded md-18">home</span></a>
+      <a class="titlenumber">{{ member_count }}</a>
+      {% endif %}
+      {%if True%}<a class="deactive_right" href="{{url_for('user', email=current_user.email)}}"><span class="material-symbols-rounded md-18"><font color="black">account_circle</font></span></a>{%endif%}
+      
+      {%if True%}<a class="active_right" href="{{url_for('communities')}}"><button><span class="material-symbols-rounded md-18"><font color="black">forum</font></span></button></a>{%endif%}
+      {% if not ((not True) and (False)) %}<a class="deactive_right" href="{{url_for('feed')}}"><span class="material-symbols-rounded md-18"><font color="black">group</font></span></a>{%endif%}
+      {% if (not True) and (False) %}{%endif%}
+      <a class="deactive_right" href="{{url_for('explore')}}"><span class="material-symbols-rounded md-18"><font color="black">explore</font></span></a>
+      {% if True or (False) %}<a class="deactive_right" href="{{url_for('articles')}}"><span class="material-symbols-rounded md-18"><font color="black">article</font></span></a>{% endif %}
+      <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
+      {% if platform == "hereus_app_on_ios" %}<a class="deactive_right" href="{% if '#' in community_is.name %}{{ url_for('community', name=community_main.name) }}{% else %}{{ url_for('communities') }}{% endif %}"><span class="material-symbols-rounded md-18"><font color="black" size="3">arrow_back_ios</font></span></a>{% endif %}
+      {% if True %}<a class="deactive_right" style="font-size: 20px;">{{current_user.tokens}} <span class="material-symbols-rounded md-18"style="font-size: 15px;">generating_tokens</span></a>{% endif %}
+    </div>
+  </head>
+  {% if '<style>' in community_is.community_info.about %}
+  <body class="body_">
+  {%else%}
+  <body class="body_{%if True%}{{current_user.biography.split('|')[0].split('{')[1]}}{%endif%}">
+  {%endif%}
+  {%if "<style>" in (community_is.community_info.about.split("<script>")[0]) and "</style>" in (community_is.community_info.about)%}<style>{{ (community_is.community_info.about).split("<style>")[1]|safe }}</style>{%endif%}
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        {% for altcommunity in community_is.community_info.subs %}
+          {% if community_is.community_info.subname == altcommunity %}
+            <div style="background-color: #90909090;border-radius:10px;"><li style="list-style: '>';"><a href="{{url_for('community', name=community_is.community_info.title+'#'+altcommunity)}}">#{{ altcommunity.split('#')[1] }}<span class="sr-only"></span></a></li></div>
+          {% else %}
+            {% if altcommunity[:1] == "-" %}<li style="list-style: '-';"><a style="padding-left: -20px;" href="{{url_for('community', name=community_is.community_info.title+'#'+altcommunity)}}">{{ altcommunity[1:] }}<span class="sr-only"></span></a></li>{% else %}<li style="list-style: '#';"><a style="padding-left: -20px;" href="{{url_for('community', name=community_is.community_info.title+'#'+altcommunity)}}">{{ altcommunity }}<span class="sr-only"></span></a></li>{% endif %}
+          {% endif %}
+          &nbsp;<br>
+        {% endfor %}
+      </ul>
+    </div>
+    {%if community_is.community_info.subname == ''%}<div class="communityfeed">{%else%}<div class="feed">{%endif%}
+      {% if community_is.community_info.subname == '' %}
+      <h1>{{ community_is.name }}</h1>
+      {% if not community_is.text == "" %}
+      <p>{{ community_is.community_info.details }}</p>
+      {% endif %}
+      {% if not community_is.text == "" %}
+    <div class="col-sm-3 col-md-2 aboutbar" style="width:300px;">
+      <ul class="nav nav-sidebar">
+        <li style="list-style: '';"><a style="padding-left: -20px;">{{ community_is.community_info.about|safe }}<span class="sr-only"></span></a></li>
+      </ul>
+    </div>
+    {%endif%}
+      {% else %}
+      &nbsp;<br>
+      {{community_is.community_info.details.split("|||")[1]}}<br>
+      {% endif %}
+      <div class="row">
+        &nbsp;<br>
+        {{member_count}} {{strings["feed"]["communities"]["uye"]}}<br>
+        &nbsp;<br>
+        {% if community_is.user_data.canpost %}
+        <form method="POST" class="bigscreenform">
+          <input type="text" name="content" id="content" placeholder="{{strings["feed"]["follows"]["paylasim_yap"]}}" class="textbox-grey" style="width: 60%;">
+          <input type="submit" class="button-small">
+        </form><br>
+        {% endif %}
+      </div>
+      {% if community_is.community_info.owner == current_user.email %}
+      <a class="deactive_left" href="{{url_for('set_community', name=community_is.name)}}"><span class="material-symbols-rounded md-18">settings</span></a>
+      {% else %}
+      {% if community_is.community_info.title in current_user.communities %}
+      <a class="deactive_left" href="{{url_for('leave_community', name=community_is.community_info.title.split('#')[0])}}"><span class="material-symbols-rounded md-18">logout</span></a>
+      {% else %}
+      <a class="deactive_left" href="{{url_for('join_community', name=community_is.community_info.title.split('#')[0])}}"><span class="material-symbols-rounded md-18">add</span></a>
+      {% endif %}
+      {% endif %}
+      {% if community_is.owner == current_user.email %}
+      {% if not community_main.owner == current_user.email %}
+      <a class="deactive_left" href="{{url_for('set_community', name=community_is.name)}}"><span class="material-symbols-rounded md-18">settings</span></a>
+      {% endif %}
+      <a class="deactive_left" href="{{url_for('community', name=community_is.name.split('#')[0])}}"><span class="material-symbols-rounded md-18">home</span></a>
+      {% endif %}
+      <details>
+        <summary>{{strings["feed"]["communities"]["alt_topluluklar"]}}</summary>
+        <ul class="nav nav-sidebar">
+          {% for altcommunity in community_is.community_info.subs %}
+          {% if community_is.name == altcommunity.name %}
+          <div style="background-color: #90909090;border-radius:10px;"><li style="list-style: '>';"><a href="{{url_for('community', name=altcommunity)}}">#{{ altcommunity.split('#')[1] }}<span class="sr-only"></span></a></li></div>
+          {% else %}
+            {% if altcommunity.name.split("#")[1][:1] == "-" %}<li style="list-style: '-';"><a style="padding-left: -20px;" href="{{url_for('community', name=altcommunity)}}">{{ altcommunity.name.split('#')[1][1:] }}<span class="sr-only"></span></a></li>{% else %}<li style="list-style: '#';"><a style="padding-left: -20px;" href="{{url_for('community', name=altcommunity.name)}}">{{ altcommunity.name.split('#')[1] }}<span class="sr-only"></span></a></li>{% endif %}
+          {% endif %}
+          &nbsp;<br>
+        {% endfor %}
+        </ul>
+      </details>
+      {% for post in posts %}
+        {% if (not post.community.split("#")[1] == "Kurallar") or (community_is.community_info.title.split("#")[1] == "Kurallar") %}
+          {% if community_is.community_info.title.split("#")[1] == "Kurallar" %}
+          <div>
+          {% else %}
+          <div class="the_box" style=" border-radius: 15px; ">
+          {% endif %}
+            {% if not community_is.community_info.title.split("#")[1] == "Kurallar" %}&nbsp;<br>{% endif %}
+            {% if email+";" in community_is.mods %}
+            <font color="grey" size="1"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ url_for('del_post',id=post.id) }}">Sil</a></p></font>
+            {% endif %}
+            {% if not community_is.community_info.title.split("#")[1] == "Kurallar" %}
+            <font size="5">&nbsp;&nbsp;{{ post.username.split("#####")[0] }}{% if not post.community == community_is.name %}<span class="material-symbols-rounded md-18">arrow_forward_ios</span><a href="{{url_for('community',name=post.community)}}">{{ post.community.split("#")[1] }}</a>{% endif %}</font><br>
+            <font color="grey" size="1"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date_created }}</p></font>
+            {% endif %}
+            <a href="{{url_for('posts', id=post.id)}}"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;{% if post.text[:9] == "nohtml|||" %}{{ post.text[9:].split('<!-')[0].split('<long')[0] }}{% else %}{{ post.text.replace('width="','none="').replace('height="','none="').replace("<img", '<img width="300px"').split("<long>")[0]|safe }}{% endif %}</font><br>
+            &nbsp;<br>
+            {% if "<long>" in post.text %}<i style="color:#90909090;">&nbsp;{{strings["feed"]["follows"]["devamini_oku"]}}</i>{% endif %}
+          </div>
+          {% if not community_is.community_info.title.split("#")[1] == "Kurallar" %}&nbsp;<br>{% endif %}
+        </a>{% endif %}
+      {% endfor %}
+    </div>
+    &nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
+  </body>
+</html>

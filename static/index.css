@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@media (min-width: 768px) {
+body {
+  padding-top: 50px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.body_red {background-color: #ff9696;}
+.body_orange {background-color: #ffe28a;}
+.body_yellow {background-color: #ffffb1;}
+.body_green {background-color: #b1ffb1;}
+.body_blue {background-color: #b1d0ff;}
+.body_pink {background-color: #ffb6f7;}
+.the_box {
+  background-color: #f0f0f080;
+  backdrop-filter: blur(10px);
+}
+.crosspostedcolor {
+  background-color: #ffffff;
+}
+.body_red .the_box {background-color: #ffcece;}
+.body_orange .the_box {background-color: #fff8e4;}
+.body_yellow .the_box {background-color: #ffffe6;}
+.body_green .the_box {background-color: #dfffdf;}
+.body_blue .the_box {background-color: #d8e7ff;}
+.body_pink .the_box {background-color: #ffd7fa;}
+.topnav {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff80;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
+@media (min-width: 768px) {
+  .topnav {
+    top: 0px;
+  }
+}
+.body_red div.topnav {background-color: #ff969680;}
+.body_orange div.topnav {background-color: #ffe28a80;}
+.body_yellow div.topnav {background-color: #ffffb180;}
+.body_green div.topnav {background-color: #b1ffb180;}
+.body_blue div.topnav {background-color: #b1d0ff80;}
+.body_pink div.topnav {background-color: #ffb6f780;}
+.topnav input.textbox {
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  width: 400px;
+  height: 30px;
+  font-size: 20px;
+}
+.body_red div.topnav input.textbox {background-color: #ffcece;}
+.body_orange div.topnav input.textbox {background-color: #fff8e4;}
+.body_yellow div.topnav input.textbox {background-color: #ffffe6;}
+.body_green div.topnav input.textbox {background-color: #dfffdf;}
+.body_blue div.topnav input.textbox {background-color: #d8e7ff;}
+.body_pink div.topnav input.textbox {background-color: #ffd7fa;}
+.topnav a.deactive_left {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.active_right button span font {
+  color: white;
+}
+.topnav a.title {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.titlenumber {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.titleicon {
+  float: left;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 10px;
+}
+.topnav a.active_left {
+  background-color: #007dd1;
+  color: #000000;
+}
+.topnav a.active_left button {
+  background-color: #007dd1;
+  color: #000000;
+  border: none;
+}
+.topnav a.active_right button {
+  background-color: #007dd1;
+  border-radius: 15px;
+  color: #ffffff;
+  border: none;
+  padding: 14px 16px;
+  align-items: left;
+}
+.body_red div.topnav a.active_right button {background-color: #ff0000;}
+.body_orange div.topnav a.active_right button {background-color: #ffa200;}
+.body_yellow div.topnav a.active_right button {background-color: #ffff00;}
+.body_green div.topnav a.active_right button {background-color: #00ff00;}
+.body_blue div.topnav a.active_right button {background-color: #007dd1;}
+.body_pink div.topnav a.active_right button {background-color: #ff00e1;}
+.topnav a.deactive_right {
+  float: right;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.active_right {
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  align-items: left;
+}
+.button {
+  border-radius: 15px;
+  border: none;
+  background-color: #007dd1;
+  color: whitesmoke;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+.body_red .button {background-color: #ff0000;}
+.body_orange .button {background-color: #ffa200;}
+.body_yellow .button {background-color: #ffff00;}
+.body_green .button {background-color: #00ff00;}
+.body_blue .button {background-color: #007dd1;}
+.body_pink .button {background-color: #ff00e1;}
+.button-small {
+  border-radius: 15px;
+  border: none;
+  background-color: #007dd1;
+  color: whitesmoke;
+  width: 150px;
+  height: 54px;
+  font-size: 15px;
+}
+.body_red .button-small {background-color: #ff0000;}
+.body_orange .button-small {background-color: #ffa200;}
+.body_yellow .button-small {background-color: #ffff00;}
+.body_green .button-small {background-color: #00ff00;}
+.body_blue .button-small {background-color: #007dd1;}
+.body_pink .button-small {background-color: #ff00e1;}
+.textbox {
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  color: black;
+  width: 400px;
+  max-width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+.textbox-grey {
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  width: 400px;
+  max-width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+.body_red .textbox-grey {background-color: #ffcece;}
+.body_orange .textbox-grey {background-color: #fff8e4;}
+.body_yellow .textbox-grey {background-color: #ffffe6;}
+.body_green .textbox-grey {background-color: #dfffdf;}
+.body_blue .textbox-grey {background-color: #d8e7ff;}
+.body_pink .textbox-grey {background-color: #ffd7fa;}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #151515;
+    color: white;
+  }
+  .body_red {background-color: #1b0000;}
+  .body_orange {background-color: #1b1000;}
+  .body_yellow {background-color: #1b1b00;}
+  .body_green {background-color: #001b00;}
+  .body_blue {background-color: #00001b;}
+  .body_pink {background-color: #10001b;}
+  .topnav {
+    background-color: #151515;
+  }
+  .crosspostedcolor {
+    background-color: #151515;
+  }
+  .body_red .crosspostedcolor {background-color: #1b0000;}
+  .body_orange .crosspostedcolor {background-color: #1b1000;}
+  .body_yellow .crosspostedcolor {background-color: #1b1b00;}
+  .body_green .crosspostedcolor {background-color: #001b00;}
+  .body_blue .crosspostedcolor {background-color: #00001b;}
+  .body_pink .crosspostedcolor {background-color: #10001b;}
+
+  .body_red div.topnav {background-color: #1b000080;}
+  .body_orange div.topnav {background-color: #1b100080;}
+  .body_yellow div.topnav {background-color: #1b1b0080;}
+  .body_green div.topnav {background-color: #001b0080;}
+  .body_blue div.topnav {background-color: #00001b80;}
+  .body_pink div.topnav {background-color: #10001b80;}
+  .the_box {
+    background-color: #00000080;
+  }
+  .body_red .the_box {background-color: #150000;}
+  .body_orange .the_box {background-color: #150700;}
+  .body_yellow .the_box {background-color: #151500;}
+  .body_green .the_box {background-color: #001500;}
+  .body_blue .the_box {background-color: #000015;}
+  .body_pink .the_box {background-color: #150015;}
+  .topnav input.textbox {
+    background-color: #000000;
+    color: white;
+  }
+  .body_red div.topnav input.textbox {background-color: #150000;}
+  .body_orange div.topnav input.textbox {background-color: #150700;}
+  .body_yellow div.topnav input.textbox {background-color: #151500;}
+  .body_green div.topnav input.textbox {background-color: #001500;}
+  .body_blue div.topnav input.textbox {background-color: #000015;}
+  .body_pink div.topnav input.textbox {background-color: #150015;}
+  .topnav a.deactive_left {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a.active_right button span font {
+    color: white;
+  }
+  .topnav a.deactive_left span {
+    color: white;
+  }
+  .topnav a.title {
+    color: #ffffff;
+  }
+  .topnav a.titlenumber {
+    color: #ffffff;
+  }
+  .topnav a.active_left {
+    background-color: #007dd1;
+    color: #000000;
+  }
+  .topnav a.active_left button {
+    background-color: #007dd1;
+    color: #000000;
+    border: none;
+  }
+  .topnav a.active_right button {
+    background-color: #007dd1;
+    border-radius: 15px;
+    color: #000000;
+    border: none;
+    padding: 14px 16px;
+    align-items: left;
+  }
+  .topnav a.deactive_right {
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a.deactive_right font {
+    color: #ffffff;
+  }
+  .topnav a.active_right {
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    align-items: left;
+  }
+  .button {
+    border-radius: 15px;
+    border: none;
+    background-color: #007dd1;
+    color: whitesmoke;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .button-small {
+    border-radius: 15px;
+    border: none;
+    background-color: #007dd1;
+    color: whitesmoke;
+    width: 150px;
+    height: 54px;
+    font-size: 15px;
+  }
+  .textbox {
+    border-radius: 15px;
+    border: none;
+    background-color: #151515;
+    color: #ffffff;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .textbox-grey {
+    border-radius: 15px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .body_red .textbox-grey {background-color: #150000;}
+  .body_orange .textbox-grey {background-color: #150700;}
+  .body_yellow .textbox-grey {background-color: #151500;}
+  .body_green .textbox-grey {background-color: #001500;}
+  .body_blue .textbox-grey {background-color: #000015;}
+  .body_pink .textbox-grey {background-color: #150015;}
+
+  .body_red .textbox {background-color: #1b0000;}
+  .body_orange .textbox {background-color: #1b1000;}
+  .body_yellow .textbox {background-color: #1b1b00;}
+  .body_green .textbox {background-color: #001b00;}
+  .body_blue .textbox {background-color: #00001b;}
+  .body_pink .textbox {background-color: #10001b;}
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+}
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 50px;
+    margin: 0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    overflow-x: hidden;
+  }
+@media (min-width: 768px) {
+
+}
+.the_box {
+  background-color: lightblue;
+  overflow: hidden;
+}
+.body_red {background-color: #ff9696;}
+.body_orange {background-color: #ffe28a;}
+.body_yellow {background-color: #ffffb1;}
+.body_green {background-color: #b1ffb1;}
+.body_blue {background-color: #b1d0ff;}
+.body_pink {background-color: #ffb6f7;}
+.body_red div.topnav {background-color: #ff9696;}
+.body_orange div.topnav {background-color: #ffe28a;}
+.body_yellow div.topnav {background-color: #ffffb1;}
+.body_green div.topnav {background-color: #b1ffb1;}
+.body_blue div.topnav {background-color: #b1d0ff;}
+.body_pink div.topnav {background-color: #ffb6f7;}
+.body_red .the_box {background-color: #ffcece;}
+.body_orange .the_box {background-color: #fff8e4;}
+.body_yellow .the_box {background-color: #ffffe6;}
+.body_green .the_box {background-color: #dfffdf;}
+.body_blue .the_box {background-color: #d8e7ff;}
+.body_pink .the_box {background-color: #ffd7fa;}
+.topnav {
+  position: fixed;
+  width: 100%;
+  background-color: #add8e6;
+  overflow: hidden;
+  bottom: 0px;
+  backdrop-filter: blur(10px);
+  }
+.body_red div.topnav input.textbox {background-color: #ffcece;}
+.body_orange div.topnav input.textbox {background-color: #fff8e4;}
+.body_yellow div.topnav input.textbox {background-color: #ffffe6;}
+.body_green div.topnav input.textbox {background-color: #dfffdf;}
+.body_blue div.topnav input.textbox {background-color: #d8e7ff;}
+.body_pink div.topnav input.textbox {background-color: #ffd7fa;}
+.topnav a.deactive_left {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 3px;
+}
+.topnav a.title {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  display: block;
+}
+.topnav a.titlenumber {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  display: block;
+}
+.topnav a.titleicon {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  display: block;
+}
+.topnav a.deactive_left:hover {
+  background-color: rgb(90, 90, 90);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+}
+.topnav a.active_left button {
+  background-color: #f0f8ff;
+  color: #000000;
+  border-radius: 50px;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+}
+.topnav a.deactive_right {
+  float: right;
+  color: #000000;
+  text-align: center;
+  padding: 3%;
+  text-decoration: none;
+  font-size: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.topnav a.active_right button {
+  float: right;
+  text-align: center;
+  padding: 4%;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: aliceblue;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.button {
+  border-radius: 15px;
+  border: none;
+  background-color: #007dd1;
+  color: whitesmoke;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+.button-small {
+  border-radius: 15px;
+  border: none;
+  background-color: #007dd1;
+  color: whitesmoke;
+  width: 120px;
+  height: 54px;
+  font-size: 15px;
+}
+.textbox {
+  border-radius: 15px;
+  border: none;
+  background-color: aliceblue;
+  color: black;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+.textbox-grey {
+  border-radius: 15px;
+  border: none;
+  background-color: lightblue;
+  color: black;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+.body_red .textbox-grey {background-color: #ffcece;}
+.body_orange .textbox-grey {background-color: #fff8e4;}
+.body_yellow .textbox-grey {background-color: #ffffe6;}
+.body_green .textbox-grey {background-color: #dfffdf;}
+.body_blue .textbox-grey {background-color: #d8e7ff;}
+.body_pink .textbox-grey {background-color: #ffd7fa;}
+.body_red .textbox {background-color: #ffcece;}
+.body_orange .textbox {background-color: #fff8e4;}
+.body_yellow .textbox {background-color: #ffffe6;}
+.body_green .textbox {background-color: #dfffdf;}
+.body_blue .textbox {background-color: #d8e7ff;}
+.body_pink .textbox {background-color: #ffd7fa;}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: white;
+  }
+  .the_box {
+    background-color: #13191f;
+  }
+  .body_red {background-color: #000000;}
+  .body_orange {background-color: #000000;}
+  .body_yellow {background-color: #000000;}
+  .body_green {background-color: #000000;}
+  .body_blue {background-color: #000000;}
+  .body_pink {background-color: #000000;}
+  .body_red .the_box {background-color: #1b0000;}
+  .body_orange .the_box {background-color: #1b1000;}
+  .body_yellow .the_box {background-color: #1b1b00;}
+  .body_green .the_box {background-color: #001b00;}
+  .body_blue .the_box {background-color: #00001b;}
+  .body_pink .the_box {background-color: #10001b;}
+  .topnav {
+    background-color: #13191f;
+  }
+  .body_red div.topnav input.textbox {background-color: #1b0000;}
+  .body_orange div.topnav input.textbox {background-color: #1b1000;}
+  .body_yellow div.topnav input.textbox {background-color: #1b1b00;}
+  .body_green div.topnav input.textbox {background-color: #001b00;}
+  .body_blue div.topnav input.textbox {background-color: #00001b;}
+  .body_pink div.topnav input.textbox {background-color: #10001b;}
+  .body_red div.topnav {background-color: #150000;}
+  .body_orange div.topnav {background-color: #150700;}
+  .body_yellow div.topnav {background-color: #151500;}
+  .body_green div.topnav {background-color: #001500;}
+  .body_blue div.topnav {background-color: #000015;}
+  .body_pink div.topnav {background-color: #150015;}
+  .topnav input.textbox {
+    background-color: #2a3745;
+  }
+  .topnav a.deactive_left {
+    color: #000000;
+  }
+  .topnav a.title {
+    color: #000000;
+  }
+  .topnav a.deactive_left:hover {
+    background-color: rgb(90, 90, 90);
+    color: rgb(255, 255, 255);
+  }
+  .topnav a.active_left button {
+    background-color: #f0f8ff;
+    color: #000000;
+  }
+  .topnav a.deactive_right {
+    color: #ffffff;
+  }
+  .topnav a.active_right button {
+    background-color: #2a3745;
+    color: white;
+  }
+  .topnav a.active_right button font {
+    color: white;
+  }
+  .topnav a.deactive_right font {
+    color: white;
+  }
+  .button {
+    background-color: #007dd1;
+    color: whitesmoke;
+  }
+  .button-small {
+    background-color: #007dd1;
+    color: whitesmoke;
+  }
+  .textbox {
+    background-color: #000000;
+    color: white;
+  }
+  .textbox-grey {
+    background-color: #13191f;
+    color: white;
+  }
+  .body_red .textbox-grey {background-color: #1b0000;}
+  .body_orange .textbox-grey {background-color: #1b1000;}
+  .body_yellow .textbox-grey {background-color: #1b1b00;}
+  .body_green .textbox-grey {background-color: #001b00;}
+  .body_blue .textbox-grey {background-color: #00001b;}
+  .body_pink .textbox-grey {background-color: #10001b;}
+}
+.body_red div.topnav a.active_right button {background-color: #ff0000;}
+.body_orange div.topnav a.active_right button {background-color: #ffa200;}
+.body_yellow div.topnav a.active_right button {background-color: #ffff00;}
+.body_green div.topnav a.active_right button {background-color: #00ff00;}
+.body_blue div.topnav a.active_right button {background-color: #007dd1;}
+.body_pink div.topnav a.active_right button {background-color: #ff00e1;}
+
+.body_red .button {background-color: #ff0000;}
+.body_orange .button {background-color: #ffa200;}
+.body_yellow .button {background-color: #ffff00;}
+.body_green .button {background-color: #00ff00;}
+.body_blue .button {background-color: #007dd1;}
+.body_pink .button {background-color: #ff00e1;}
+
+.body_red .button-small {background-color: #ff0000;}
+.body_orange .button-small {background-color: #ffa200;}
+.body_yellow .button-small {background-color: #ffff00;}
+.body_green .button-small {background-color: #00ff00;}
+.body_blue .button-small {background-color: #007dd1;}
+.body_pink .button-small {background-color: #ff00e1;}
+@media (min-width: 768px) {
+    .topnav a.deactive_right {
+      float: right;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      border: none;
+      border-radius: 15px;
+      margin: 10px;
+    }
+    .topnav a.active_right button {
+      float: right;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      border: none;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+}
+.titleicon {
+  visibility: hidden;
+}
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.beta {
+  visibility: hidden;
+}

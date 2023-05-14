@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oturum Aç - PlayfulSocial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if platform == "hereus_app_on_android" %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='material3.css')}}">
+    {% elif platform == "hereus_app_on_ios" %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='uikit.css')}}">
+    {% else %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}">
+    {% endif %}
+    <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
+    {% if True %}
+    <div class="topnav">
+      <a class="title">HereUS</a>
+      <a class="active_right" href="{{url_for('login')}}"><button><span><font>Oturum Aç</font></span></button></a>
+      <a class="deactive_right" href="{{url_for('signup')}}">Hesap Oluştur</a>
+    </div>
+    {% endif %}
+  </head>
+  <body>
+    &nbsp;<center><div clas="the_box" style={%if not True%}"height: 550px;border-radius: 15px;"{%else%}"height: 500px;width: 500px;border-radius: 15px;"{%endif%}>
+        <form method="POST" action="{{url_for('login')}}">
+            &nbsp;<br>&nbsp;<br>
+            <h2>Oturum Aç</h2>
+            &nbsp;<br>&nbsp;<br>&nbsp;<br>
+            <input type="email" id="email" name="email" class="textbox{% if not '/' in platform %}-grey{% endif %}" placeholder="E-Posta"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
+            <input type="password" id="password" name="password" class="textbox{% if not '/' in platform %}-grey{% endif %}" placeholder="Parola"><br>&nbsp;<br>
+            {{message}}<br>&nbsp;<br>
+            Oturum açarak <a href="/terms" style="color:blue;text-decoration:underline;">bunlarda</a> oluşmuş bir değişiklik varsa değişikliği kabul etmiş sayılıyorsunuz.<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
+            <input type="submit" class="button" value="Oturum Aç">
+        </form>
+    </div>{% if not True %}<p>ya da <a href="{{url_for('signup')}}"><u>Hesap Oluştur</u></a></p>{% endif %}</center>
+  </body>
+</html>

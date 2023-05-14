@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HereUS Topluluklar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if platform == "hereus_app_on_android" %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='material3.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='material3feed.css')}}">
+    {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='material3plus.css')}}">{%endif%}
+    {% elif platform == "hereus_app_on_ios" %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='uikit.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='uikitfeed.css')}}">
+    {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='uikit-plus.css')}}">{%endif%}
+    {% else %}
+
+    {% if False %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='beta.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='betafeed.css')}}">
+    {% else %}
+    <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='feed.css')}}">
+    {% endif %}
+    {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='index-plus.css')}}">{%endif%}
+    {% endif %}
+    <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <div class="topnav">
+      {%if True%}<a class="deactive_right" href="{{url_for('user', email=current_user.email)}}"><span class="material-symbols-rounded md-18"><font color="black">account_circle</font></span></a>{%endif%}
+      
+      {%if True%}<a class="active_right" href="{{url_for('communities')}}"><button><span class="material-symbols-rounded md-18"><font color="black">forum</font></span></button></a>{%endif%}
+      {% if not ((not True) and (False)) %}<a class="deactive_right" href="{{url_for('feed')}}"><span class="material-symbols-rounded md-18"><font color="black">group</font></span></a>{%endif%}
+      {% if (not True) and (False) %}{%endif%}
+      <a class="deactive_right" href="{{url_for('explore')}}"><span class="material-symbols-rounded md-18"><font color="black">explore</font></span></a>
+      {% if True or (False) %}<a class="deactive_right" href="{{url_for('articles')}}"><span class="material-symbols-rounded md-18"><font color="black">article</font></span></a>{% endif %}
+      <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
+      {% if True %}<a class="deactive_right" style="font-size: 20px;">{{current_user.tokens}} <span class="material-symbols-rounded md-18"style="font-size: 15px;">generating_tokens</span></a>{% endif %}
+    </div>
+  </head>
+  <body class="body_{%if True%}{{current_user.biography.split('|')[0].split('{')[1]}}{%endif%}">
+    <div class="" style="padding-left:30px;padding-right:30px;">
+      <div class="row">
+        <h2>{{strings["feed"]["communities"]["bulundugun_topluluklar"]}}</h2>
+        <a href="{{ url_for('community_creation') }}"><button class="button-small">{{strings["feed"]["communities"]["topluluk_olustur"]}}</button></a>
+      </div>
+      &nbsp;
+      {% for community in communities %}
+      {% if not "#" in community.name %}
+        {% if not community == '' %}
+          <div class="the_box" style=" border-radius: 15px; ">
+            &nbsp;<br>
+            <font size="3"><a href="{{url_for('community', name=community)}}">&nbsp;&nbsp;&nbsp;&nbsp;{{ community }}</a>{%for user in accounts%}{%if user.email == community.owner%}{% if "communityowner" in user.username.split("#####")[1].split(",") %}<span class="material-symbols-rounded md-18">verified</span>{% endif %}{%endif%}{%endfor%}</font>&nbsp;&nbsp;&nbsp;<br>
+            <font color="grey" size="1"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ community.text  }}</p></font>
+            &nbsp;<br>
+          </div>
+          &nbsp;<br>
+        {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </body>
+</html>

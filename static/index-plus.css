@@ -1,0 +1,83 @@
+/*silver*/
+.body_silver {background-color: #dfdfdf;}
+.body_silver .the_box {background-color: #ebebeb;}
+.body_silver div.topnav {background-color: #dfdfdf80;}
+.body_silver div.topnav input.textbox {background-color: #ebebeb;}
+.body_silver div.topnav a.active_right button {background-color: #bcbcbc;}
+.body_silver .button {background-color: #bcbcbc;}
+.body_silver .button-small {background-color: #bcbcbc;}
+.body_silver .textbox-grey {background-color: #ebebeb;}
+@media (prefers-color-scheme: dark) {
+  .body_silver {background-color: #202020;}
+  .body_silver .crosspostedcolor {background-color: #151515;}
+  .body_silver div.topnav {background-color: #20202080;}
+  .body_silver .the_box {background-color: #141414;}
+  .body_silver div.topnav input.textbox {background-color: #141414;}
+  .body_silver .textbox-grey {background-color: #141414;}
+  .body_silver div.topnav a.active_right button {background-color: #434343;}
+  .body_silver .button {background-color: #434343;}
+  .body_silver .button-small {background-color: #434343;}
+}
+
+/*cyan*/
+.body_cyan {background-color: #b1ffff;}
+.body_cyan .the_box {background-color: #d8ffff;}
+.body_cyan div.topnav {background-color: #b1ffff80;}
+.body_cyan div.topnav input.textbox {background-color: #d8ffff;}
+.body_cyan div.topnav a.active_right button {background-color: #007d7d;}
+.body_cyan .button {background-color: #007d7d;}
+.body_cyan .button-small {background-color: #007d7d;}
+.body_cyan .textbox-grey {background-color: #d8ffff;}
+@media (prefers-color-scheme: dark) {
+  .body_cyan {background-color: #001b1b;}
+  .body_cyan .crosspostedcolor {background-color: #001b1b;}
+  .body_cyan div.topnav {background-color: #001b1b80;}
+  .body_cyan .the_box {background-color: #001515;}
+  .body_cyan div.topnav input.textbox {background-color: #001515;}
+  .body_cyan .textbox-grey {background-color: #001515;}
+  .body_cyan div.topnav a.active_right button {background-color: #004343;}
+  .body_cyan .button {background-color: #004343;}
+  .body_cyan .button-small {background-color: #004343;}
+}
+
+/*diamond*/
+.body_diamond {background-color: #afdfff;}
+.body_diamond .the_box {background-color: #bbebff;}
+.body_diamond div.topnav {background-color: #afdfff80;}
+.body_diamond div.topnav input.textbox {background-color: #bbebff;}
+.body_diamond div.topnav a.active_right button {background-color: #8cbcff;}
+.body_diamond .button {background-color: #8cbcff;}
+.body_diamond .button-small {background-color: #8cbcff;}
+.body_diamond .textbox-grey {background-color: #bbebff;}
+@media (prefers-color-scheme: dark) {
+  .body_diamond {background-color: #000020;}
+  .body_diamond .crosspostedcolor {background-color: #000015;}
+  .body_diamond div.topnav {background-color: #00002080;}
+  .body_diamond .the_box {background-color: #000014;}
+  .body_diamond div.topnav input.textbox {background-color: #000014;}
+  .body_diamond .textbox-grey {background-color: #000014;}
+  .body_diamond div.topnav a.active_right button {background-color: #000043;}
+  .body_diamond .button {background-color: #000043;}
+  .body_diamond .button-small {background-color: #000043;}
+}
+
+/*tokyo*/
+.body_tokyo {background-color: #acb3db;}
+.body_tokyo .the_box {background-color: #d4d4e2;}
+.body_tokyo div.topnav {background-color: #acb3db;}
+.body_tokyo div.topnav input.textbox {background-color: #d4d4e2;}
+.body_tokyo div.topnav a.active_right button {background-color: #3f6cce;}
+.body_tokyo .button {background-color: #3f6cce;}
+.body_tokyo .button-small {background-color: #3f6cce;}
+.body_tokyo .textbox-grey {background-color: #d4d4e2;}
+@media (prefers-color-scheme: dark) {
+  .body_tokyo {background-color: #050318;}
+  .body_tokyo .crosspostedcolor {background-color: #050318;}
+  .body_tokyo div.topnav {background-color: #05031880;}
+  .body_tokyo .the_box {background-color: #070522;}
+  .body_tokyo div.topnav input.textbox {background-color: #070522;}
+  .body_tokyo .textbox-grey {background-color: #070522;}
+  .body_tokyo div.topnav a.active_right button {background-color: #0d0841;}
+  .body_tokyo .button {background-color: #0d0841;}
+  .body_tokyo .button-small {background-color: #0d0841;}
+}

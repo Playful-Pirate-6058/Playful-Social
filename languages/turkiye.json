@@ -1,0 +1,92 @@
+{
+    "surumden_kaldirildi":"Sürümden Kaldırıldı",
+    "feed":{
+        "articles":{
+            "makale_ekle":"Makale Ekle",
+            "yazar":"Yazar:",
+            "baslik":"Başlık",
+            "metin_html":"Metin (HTML)",
+            "yaz":"Yaz"
+        },
+        "follows":{
+            "ne_dusunuyorsun":"Ne Düşünüyorsun, ",
+            "paylasim_yap":"Paylaşım Yap",
+            "takip_edilenler":"Takip Edilenler",
+            "akis":"Akış",
+            "kesfet":"Keşfet",
+            "devamini_oku":"Devamını Oku...",
+            "onerme":"Önerme"
+        },
+        "communities":{
+            "bulundugun_topluluklar":"Bulunduğun Topluluklar",
+            "diger_topluluklar":"Diğer Topluluklar",
+            "topluluk_olustur":"Topluluk Oluştur",
+            "uye":"üye",
+            "alt_topluluklar":"Alt-Topluluklar",
+            "etkinlik_olustur":"Etkinlik Oluştur",
+            "create":{
+                "isim":"İsim",
+                "aciklama":"Açıklama",
+                "olustur":"Oluştur",
+                "sahip_eposta":"Sahip E-Posta Adresi",
+                "kaydet":"Kaydet",
+                "paylasim_izni":"Paylaşım Yapma İzni Olanlar",
+                "topluluk_yoneticileri":"Topluluk Yöneticileri",
+                "sil":"Sil",
+                "ayarlar":"Ayarlar"
+            },
+            "etkinlikler":"Etkinlikler",
+            "kurallar":"Kurallar",
+            "olusturan":"Oluşturan:"
+        },
+        "direct":{
+            "mesaj_yaz":"Mesaj Yaz",
+            "sohbet_baslat":"Sohbet Başlat",
+            "sohbet_ekle":"Sohbet Ekle",
+            "e_posta":"E-Posta",
+            "ayarlar":"Ayarlar",
+            "isim":"İsim",
+            "kullanicilar":"Kullanıcılar",
+            "kaydet":"Kaydet",
+            "mesaj":"Mesaj",
+            "sunucu_adresi":"Sunucu Adresi",
+            "oda":"Oda",
+            "oda_anahtari":"Oda Anahtarı",
+            "dis_odaya_baglan":"Dış Odaya Bağlan",
+            "guvenli_dis_odaya_baglan":"Güvenli Dış Odaya Bağlan",
+            "dis_oda_uyari":"Uzak bağlantılarda sunucu adresine ve oda adına sahip olan herkes katılabilir. Gizli sohbetler için kullanmayınız."
+        }
+    },
+    "user":{
+        "takipci":"Takipçi",
+        "hesap_ayarlari":"Hesap Ayarları",
+        "kaydet":"Kaydet",
+        "guncelle":"Güncelle",
+        "yeni_durum":"Yeni Durum",
+        "durum_guncelle":"Durum Güncelle",
+        "biyografi_ayarla":"Biyografi Ayarla",
+        "biyografi":"Biyografi",
+        "ayarla":"Ayarla",
+        "renk_temalari":"Renk Temaları",
+        "renk_temalari_aciklama":"Bu renk kodlarından birini { öncülüyle ekleyerek uygulamaya ve profil sayfanıza renk katabilirsiniz!",
+        "app_statuses":{
+            "surfing":"İçerisinde Geziniyor",
+            "playing":"Oynuyor",
+            "listening":"Dinliyor"
+        }
+    },
+    "search":{
+        "kisiler":"Kişiler",
+        "topluluklar":"Topluluklar",
+        "paylasimlar":"Paylaşımlar",
+        "ara":"Ara..."
+    },
+    "login":{
+        "esenlikler":"Esenlikler,",
+        "bu_hesapla_devam_et":"Bu Hesapla Devam Et",
+        "iyi_geceler":"İyi Geceler,",
+        "gunaydin":"Günaydın,",
+        "iyi_gunler":"İyi Günler,",
+        "iyi_aksamlar":"İyi Akşamlar,"
+    }
+}

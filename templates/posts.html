@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paylaşım {{posted.id}} - PlayfulSocial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='feed.css')}}">
+    {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='index-plus.css')}}">{%endif%}
+    <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    {% if not current_user == "notlogin" %}
+    <div class="topnav"><center>
+          {%if True%}<a class="deactive_right" href="{{url_for('user', email=current_user.email)}}"><span class="material-symbols-rounded md-18">account_circle</span></a>{%endif%}
+        
+        {%if True%}<a class="deactive_right" href="{{url_for('communities')}}"><span class="material-symbols-rounded md-18">forum</span></a>{%endif%}
+        {% if not ((not True) and (False)) %}<a class="deactive_right" href="{{url_for('feed')}}"><span class="material-symbols-rounded md-18"><font color="black">group</font></span></a>{%endif%}
+      {% if (not True) and (False) %}{%endif%}
+        <a class="deactive_right" href="{{url_for('explore')}}"><span class="material-symbols-rounded md-18">explore</span></a>
+        {% if True or (False) %}<a class="deactive_right" href="{{url_for('articles')}}"><span class="material-symbols-rounded md-18">article</span></a>{% endif %}
+        <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
+        {% if platform == "hereus_app_on_ios" %}<a class="deactive_right" href="{% if posted.community == '' %}{{ url_for('feed') }}{% else %}{{ url_for('community', name=posted.community) }}{% endif %}"><span class="material-symbols-rounded md-18"><font color="black" size="3">arrow_back_ios</font></span></a>{% endif %}
+    </div>
+    {% else %}
+    <div class="topnav">
+      <a class="title">HereUS</a>
+      <a class="deactive_right" href="{{url_for('login')}}">Oturum Aç</a>
+      <a class="deactive_right" href="{{url_for('signup')}}">Hesap Oluştur</a>
+      <a class="deactive_right" href="{{url_for('download')}}">Uygulamayı İndir</a>
+    </div>
+    {% endif %}
+  </head>
+  <body class="body_{% if not current_user == 'notlogin' %}{%if True%}{{current_user.biography.split('|')[0].split('{')[1]}}{%endif%}{%endif%}">
+    <div class="" style="padding-left:10px;padding-right:10px;padding-top: 10px;">
+      <div class="the_box" style="border-radius: 15px; ">
+        &nbsp;<br>
+        <font size="5">&nbsp;&nbsp;{{ posted.username.split("#####")[0] }}{% if not posted.community == "" %}<span class="material-symbols-rounded md-18">arrow_forward_ios</span><a href="{{url_for('community',name=posted.community)}}">{{ posted.community }}</a>{% endif %}</font><br>
+        <font color="grey" size="1"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ posted.date_created }}</p></font>
+        <font size="3">&nbsp;&nbsp;&nbsp;&nbsp;{% if posted.text[:9] == "nohtml|||" %}{{ posted.text[9:].split("<!-")[0]}}{% else %}{{ posted.text.replace('width="','none="').replace('height="','none="').replace("<img", '<img width="300px"').replace("<long>","<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;")|safe }}{% endif %}</font><br>
+        &nbsp;<br>
+      </div>
+      &nbsp;<br>
+      {% if not current_user == "notlogin" %}
+      <form method="POST" action="{{url_for('posts', id=posted.id)}}" class="bigscreenform">
+        <input type="text" name="content" id="content" placeholder="Yorum Yap" class="textbox-grey" style="width: 250px;">
+        <input type="submit" class="button-small">
+      </form><br>
+      {% endif %}
+      {% for comment in comments %}
+      {% if not "notlogin" == current_user %}
+      <p><b>{{comment.username.split("#####")[0]}}</b>{% if comment.email == current_user.email %}&nbsp;<a href="{{url_for('del_comment',id=comment.id)}}">Sil</a>{% endif %}</p>
+      {% else %}
+      <p><b>{{comment.username.split("#####")[0]}}</b></p>
+      {% endif %}
+      <p>{{comment.text|safe}}</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
