@@ -22,7 +22,6 @@
             <input type="email" id="email" name="email" class="textbox{% if not '/' in platform %}-grey{% endif %}" placeholder="E-Posta"><br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
             <input type="password" id="password" name="password" class="textbox{% if not '/' in platform %}-grey{% endif %}" placeholder="Parola"><br>&nbsp;<br>
             {{message}}<br>&nbsp;<br>
-            Oturum açarak <a href="/terms" style="color:blue;text-decoration:underline;">bunlarda</a> oluşmuş bir değişiklik varsa değişikliği kabul etmiş sayılıyorsunuz.<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
             <input type="submit" class="button" value="Oturum Aç">
         </form>
     </div>{% if not True %}<p>ya da <a href="{{url_for('signup')}}"><u>Hesap Oluştur</u></a></p>{% endif %}</center>
