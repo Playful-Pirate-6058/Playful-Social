@@ -48,9 +48,9 @@ def index():
 def login():
     if request.method == 'POST':
         try:
-            cuser = json.loads(requests.post(API_URL('DATA_USER'), data={"email":"demo@local","password":"","user":"demo@local","posts_included":"false"}).content)
-            cuser.update({"email":"demo@local"})
-            cuser.update({"password":""})
+            cuser = json.loads(requests.post(API_URL('DATA_USER'), data={"email":request.form['email'],"password":request.form['password'],"user":request.form['email'],"posts_included":"false"}).content)
+            cuser.update({"email":request.form['email']})
+            cuser.update({"password":request.form['password']})
             session['cuser'] = cuser
             print(session)
             if session['cuser'] == cuser: return redirect(url_for('feed'))
