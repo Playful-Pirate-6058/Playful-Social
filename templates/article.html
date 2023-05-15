@@ -8,8 +8,6 @@
     {% if plus %}<link rel="stylesheet" href="{{url_for('.static', filename='index-plus.css')}}">{%endif%}
     <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    {% if not platform == "hereus_app_on_ios" %}
-    {% if True %}
     <div class="topnav">
       {%if True%}<a class="deactive_right" href="{{url_for('user', email=current_user.email)}}"><span class="material-symbols-rounded md-18"><font color="black">account_circle</font></span></a>{%endif%}
       
@@ -21,10 +19,6 @@
       <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
       {% if True %}<a class="deactive_right" style="font-size: 20px;">{{current_user.tokens}} <span class="material-symbols-rounded md-18"style="font-size: 15px;">generating_tokens</span></a>{% endif %}
     </div>
-    {% endif %}
-    {% else %}
-    <a href="{{ url_for('articles') }}"><span class="material-symbols-rounded md-18">arrow_back_ios</span></a>
-    {% endif %}
   </head>
   <body class="body_{%if True%}{{current_user.biography.split('|')[0].split('{')[1]}}{%endif%}">
     <div class="" style="padding-left:10px;padding-right:10px;padding-top: 10px;">

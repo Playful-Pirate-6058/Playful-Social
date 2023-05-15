@@ -18,11 +18,10 @@
         <a class="deactive_right" href="{{url_for('explore')}}"><span class="material-symbols-rounded md-18">explore</span></a>
         {% if True or (False) %}<a class="deactive_right" href="{{url_for('articles')}}"><span class="material-symbols-rounded md-18">article</span></a>{% endif %}
         <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
-        {% if platform == "hereus_app_on_ios" %}<a class="deactive_right" href="{% if posted.community == '' %}{{ url_for('feed') }}{% else %}{{ url_for('community', name=posted.community) }}{% endif %}"><span class="material-symbols-rounded md-18"><font color="black" size="3">arrow_back_ios</font></span></a>{% endif %}
     </div>
     {% else %}
     <div class="topnav">
-      <a class="title">HereUS</a>
+      <a class="title">PlayfulSocial</a>
       <a class="deactive_right" href="{{url_for('login')}}">Oturum Aç</a>
       <a class="deactive_right" href="{{url_for('signup')}}">Hesap Oluştur</a>
       <a class="deactive_right" href="{{url_for('download')}}">Uygulamayı İndir</a>

@@ -36,7 +36,6 @@
       <a class="deactive_right" href="{{url_for('explore')}}"><span class="material-symbols-rounded md-18"><font color="black">explore</font></span></a>
       {% if True or (False) %}<a class="deactive_right" href="{{url_for('articles')}}"><span class="material-symbols-rounded md-18"><font color="black">article</font></span></a>{% endif %}
       <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
-      {% if platform == "hereus_app_on_ios" %}<a class="deactive_right" href="{% if '#' in community_is.name %}{{ url_for('community', name=community_main.name) }}{% else %}{{ url_for('communities') }}{% endif %}"><span class="material-symbols-rounded md-18"><font color="black" size="3">arrow_back_ios</font></span></a>{% endif %}
       {% if True %}<a class="deactive_right" style="font-size: 20px;">{{current_user.tokens}} <span class="material-symbols-rounded md-18"style="font-size: 15px;">generating_tokens</span></a>{% endif %}
     </div>
   </head>

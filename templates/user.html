@@ -24,7 +24,6 @@
       <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
       {% else %}
       <a class="deactive_right">{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;">{% else %}{% if True %}<form method="POST" action="{{ url_for('search') }}"><input type="text" placeholder="{{strings["search"]["ara"]}}" id="key" name="key" class="textbox" style="height:fit-content;width:330px;">{% endif %}{% endif %}</form></a>
-      {%if platform=="hereus_app_on_ios"%}<a class="deactive_right" href="{{ url_for('feed') }}"><span class="material-symbols-rounded md-18"><font color="black" size="3">arrow_back_ios</font></span></a>{%endif%}
       {% endif %}
       {% if True %}<a class="deactive_right" style="font-size: 20px;">{{current_user.tokens}} <span class="material-symbols-rounded md-18"style="font-size: 15px;">generating_tokens</span></a>{% endif %}
     </div>

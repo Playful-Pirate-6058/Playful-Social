@@ -3,19 +3,13 @@
   <head>
     <title>Oturum Aç - PlayfulSocial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if platform == "hereus_app_on_android" %}
-    <link rel="stylesheet" href="{{url_for('.static', filename='material3.css')}}">
-    {% elif platform == "hereus_app_on_ios" %}
-    <link rel="stylesheet" href="{{url_for('.static', filename='uikit.css')}}">
-    {% else %}
     <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}">
-    {% endif %}
     <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.png')}}">
     {% if True %}
     <div class="topnav">
-      <a class="title">HereUS</a>
+      <a class="title">PlayfulSocial</a>
       <a class="active_right" href="{{url_for('login')}}"><button><span><font>Oturum Aç</font></span></button></a>
-      <a class="deactive_right" href="{{url_for('signup')}}">Hesap Oluştur</a>
+      <a class="deactive_right" href="https://hereus.pythonanywhere.com/signup">Hesap Oluştur</a>
     </div>
     {% endif %}
   </head>
