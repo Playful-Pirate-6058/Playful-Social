@@ -71,6 +71,11 @@ def posts(id):
         comments = posted["comments"]
         return render_template("posts.html", posted=posted, comments=comments, posted_id=str(id), current_user=cuser, plus=cuser["plus"], strings=strings(cuser['region']))
 
+@app.route('/communities/<name>')
+def community_redirector_standart(name): return redirect(url_for('community', name=name))
+@app.route('/article/<id>')
+def article_redirector_standart(id): return redirect(url_for('article', id=id))
+
 #PLAYFUL CODE :)))
 @app.route('/feed/communities/<name>', methods=['GET','POST'])
 def community(name):
@@ -222,6 +227,7 @@ def follow(email):
 def user(email):
     try: cuser = session['cuser']; print(session['cuser']['email'])
     except: return redirect(url_for('login'))
+    if not '@' in email: return redirect(request.url+'%40barsposta.com')
     user = json.loads(requests.post(API_URL('DATA_USER'), data={'email':cuser['email'],'password':cuser['password'],'user':email, 'posts_included':'true'}).content)
     posts_safe = user["posts"]
     mails_in_feed = {}
