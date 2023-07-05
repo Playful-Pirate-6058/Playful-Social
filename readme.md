@@ -8,8 +8,6 @@
 - HereUS Sohbet (because ASD is not open source)
 - Community Chats (too complicated)
 - Sign Up (API forces you to use main client)
-- Subscribing To Plus (API forces you to use main client)
-- Token Sending (API is not capable, even HereUS-3 cannot)
 - Article Publishing
 - **Profile Editing**
 - **Community Settings**
